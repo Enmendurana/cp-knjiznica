@@ -1,8 +1,8 @@
 /*
 	Naslov: Range Minimum Query
- 	Problem: Min na intervalu [l, r]
-  	Čas per init: O(N * log(N))
-    Čas per query: O(1)
+ 	Problem: Minimum na intervalu [l, r]
+	Čas per init: O(N * log(N))
+	Čas per query: O(1)
 	Prostor: O(N * log(N))
 */
 
