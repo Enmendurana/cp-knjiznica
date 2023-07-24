@@ -1,8 +1,8 @@
 /*
 	Naslov: Segment Tree
-  	Problem: 1. Povečaj vsako vrednost na intervalu [lx, rx) za w.
-   			 2. Nastavi vsako vrednost na intervalu [lx, rx) na w.
-	   		 3. Izračunaj vsoto vrednosti na intervalu [lx, rx)
+  	Problem: 	1. Povečaj vsako vrednost na intervalu [lx, rx) za w.
+				2. Nastavi vsako vrednost na intervalu [lx, rx) na w.
+				3. Izračunaj vsoto vrednosti na intervalu [lx, rx)
 	Čas per build: O(N * log(N))	
   	Čas per query/update: O(log(N))
 	Prostor: O(N)
