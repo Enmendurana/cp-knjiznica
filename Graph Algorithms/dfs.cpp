@@ -6,7 +6,7 @@
 */ 
 
 const int maxn = int(3e5) + 10;
-bool visited[maxn];
+bool visited[maxn]; vector<vector<int>> G;
 
 void dfs(int v) {
 	visited[v] = true;
