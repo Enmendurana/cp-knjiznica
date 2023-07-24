@@ -11,6 +11,6 @@ bool visited[maxn];
 void dfs(int v) {
 	visited[v] = true;
 	for(int u : G[v]) {
-    	if(!visited[u]) dfs(u);
+    		if(!visited[u]) dfs(u);
 	}
 }
