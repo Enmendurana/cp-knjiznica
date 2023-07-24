@@ -1,7 +1,8 @@
 /*
 	Naslov: Segment Tree
- 	Problem: 	1. Range queries [lx, rx)
-  				2. Point updates
+ 	Problem: 	
+  		1. Range queries [lx, rx)
+  		2. Point updates
   	Čas per build: O(N * log(N))
 	Čas per query/update: O(log(N))
  	Prostor: O(N)
