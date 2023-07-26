@@ -16,7 +16,7 @@ Mi jih bomo delili na par kategorij:
 # Navodila za dodajanje novih algoritmov
 + Naslov
 + Opis problema, ki ga rešuje
-+ Časonva/Prostorska zahtevnost 
++ Časovna/Prostorska zahtevnost
 + C++ implementacija
 
 # Nasveti
