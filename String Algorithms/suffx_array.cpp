@@ -1,3 +1,7 @@
+int cnt[maxn], pos[maxn];
+int p[maxn], p_new[maxn];
+int c[maxn], c_new[maxn];
+
 void count_sort() {
     memset(cnt,0,sizeof(cnt));
     for(int i = 0; i < n; i++) {
@@ -64,4 +68,21 @@ void solve() {
 
         swap(c, c_new);
     }
+}
+
+vector<int> make_lcp() {
+    int n = s.size();
+    vector<int> lcp(n-1);
+    int k = 0;
+    for(int i = 0; i < n-1; i++) {
+        int pi = c[i];
+        int j = p[pi-1];
+        while(max(i+k, j+k) < n) {
+            if(s[i + k] == s[j + k]) k++;
+            else break;
+        }
+        lcp[pi-1] = k;
+        k = max(k-1, 0);
+    }
+    return lcp;
 }
