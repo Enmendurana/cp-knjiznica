@@ -1,3 +1,7 @@
+/*
+    Problem: strongly connected components v usmerjenem grafu.
+*/
+
 vector<vector<int>> g;
 
 int timer = 0;
