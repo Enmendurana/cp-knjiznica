@@ -3,6 +3,7 @@
     Problem: Iskanje LCA
     Čas per build: O(N)
     Čas per query: O(1)
+    Naloga: https://cses.fi/problemset/task/1688
 */
 
 const int maxn = int(1e6)+10;
