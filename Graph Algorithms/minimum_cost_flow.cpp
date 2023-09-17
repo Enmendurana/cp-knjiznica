@@ -1,7 +1,7 @@
 /*
     Naslov: Minimum Cost Max Flow
     Naloga: Minimum cena, da pošljem flow iz vozlišča s v vozlišče t
-    Čas: O(F*N*log(N))
+    Čas: O(F*N*M)
     Naloga: https://cses.fi/problemset/task/2121
 */
 
@@ -20,16 +20,16 @@ void add_edge(int v, int u, int cap, int w) {
     ++timer;
 }
 
-bool dijkstra(int s, int t) {
+bool bellman_ford(int s, int t) {
     fill_n(d,t+1,INT_MAX);
 
-    priority_queue<ii, vector<ii>, greater<ii>> pq;
+    queue<ii> q;
 
-    pq.emplace(0,s);
+    q.emplace(0,s);
     d[s] = 0; p[s] = s;
 
-    while(!pq.empty()) {
-        auto [dist, v] = pq.top(); pq.pop();
+    while(!q.empty()) {
+        auto [dist, v] = q.top(); q.pop();
 
         if(d[v] != dist) continue;
 
@@ -38,7 +38,7 @@ bool dijkstra(int s, int t) {
             if(d[v] + w < d[u] && cap > flow) {
                 d[u] = d[v] + w; 
                 p[u] = i;
-                pq.emplace(d[u],u);
+                q.emplace(d[u],u);
             }
         }
     }
@@ -73,7 +73,7 @@ int aug(int s, int t, int k, int &cost) {
 
 int min_cost(int s, int t, int mf) {
     int cost = 0;
-    while(mf != 0 && dijkstra(s,t)) {
+    while(mf != 0 && bellman_ford(s,t)) {
         mf -= aug(s,t,mf,cost);
     }
     return (mf==0) ? cost : -1;
