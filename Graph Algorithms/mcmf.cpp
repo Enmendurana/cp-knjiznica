@@ -1,6 +1,6 @@
 /*
     Naslov: Minimum Cost Max Flow (Potentials)
-    Naloga: Minimum cena, da pošljem flow iz vozlišča s v vozlišče t
+    Naloga: Minimum cena, da pošljem max flow iz vozlišča s v vozlišče t
     Čas: O(F*M*log(N))
     Naloga: https://cses.fi/problemset/task/2121
 */
