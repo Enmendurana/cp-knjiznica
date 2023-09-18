@@ -32,9 +32,7 @@ bool dijkstra(int s, int t) {
 
     while(!pq.empty()) {
         auto [dist, v] = pq.top(); pq.pop();
-        if(v==t) {
-            ans = 1; break;
-        }
+        ans |= (v==t);
 
         if(dist != d[v]) continue;
 
@@ -49,7 +47,7 @@ bool dijkstra(int s, int t) {
         }
     }
 
-    for(int v = 1; v <= t; v++) {
+    for(int v = 0; v < maxn; v++) {
         d[v] += pot[v] - pot[s];
     }
 
