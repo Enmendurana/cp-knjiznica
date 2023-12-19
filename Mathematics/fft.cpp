@@ -10,7 +10,6 @@ typedef complex<double> cd;
 
 void fft(vector<cd> &a, bool invert) {
     int n = (int)a.size();
-    int lg_n = __lg(n);
 
     for (int i = 1, j = 0; i < n; i++) {
         int bit = (n >> 1);
