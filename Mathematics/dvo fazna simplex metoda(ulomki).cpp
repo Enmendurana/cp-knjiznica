@@ -315,8 +315,6 @@ void simplex(int n, int m, int faza) {
             vstavi(vhod, i);
         }
 
-        print(pivot,vhod,n,m);
-
     }
 
     debug << "error\n";
