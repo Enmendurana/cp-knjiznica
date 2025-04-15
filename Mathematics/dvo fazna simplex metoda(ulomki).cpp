@@ -186,27 +186,6 @@ void print(int n) {
 
 }
 
-void print(int vhod, int pivot, int n, int m) {
-    debug << vhod << " " << pivot << "\n";
-    for(int i = 1; i <= n+m+1; i++) {
-        if(base[i]) {
-            debug << "x[" << (i%(n+m+1)) << "] = ";
-            for(int j = 0; j <= n+m+1; j++) {
-                debug << x[i][j] << " ";
-            }
-            debug << "\n";
-        }
-    }
-
-    debug << "z = ";
-
-    for(int j = 0; j <= n+m+1; j++) {
-        debug << x[0][j] << " ";
-    }
-
-    debug << "\n";
-}
-
 void simplex(int n, int m, int faza) {
 
     int w = n+m+1;
@@ -306,7 +285,6 @@ void simplex(int n, int m, int faza) {
         if(!pivot) {
             cout << "neomejen\n"; return;
         }
-
 
         izpostavi(pivot, vhod);
         base[vhod] = 1; base[pivot] = 0;
